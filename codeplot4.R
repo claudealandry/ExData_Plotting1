@@ -12,7 +12,7 @@ df1 <- transform(df1, datetime = as.POSIXct(paste(Date, Time)), "%d/%m/%Y %H:%M:
 #creating the 4 plots for  plot4
 
 plot4 <- function() {
-    par(mfrow = c(2,2))
+    par(mfrow = c(2,2), cex.ylab = .75, mar=c(4,4,1,1))
     
     #creating plot1
     plot(df1$datetime, df1$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power")
